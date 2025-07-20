@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get("/" , (req, res)=>{
     res.json({
-        message : "well ,hi there"
+        message : "well ,hi there from the index.ts file"
     })
 })
 
@@ -20,3 +20,5 @@ app.post("/" , async (req , res)=>{
         message :"You are successfully logged in !!!!"
     })
 })
+
+app.listen(3000);
