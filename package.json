@@ -1,0 +1,31 @@
+{
+  "name": "dockerp-5",
+  "version": "1.0.0",
+  "description": "basic module for docker practice",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivanshuPande/docker-2.git"
+  },
+  "keywords": [
+    "docker-2"
+  ],
+  "author": "Shivanshu Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShivanshuPande/docker-2/issues"
+  },
+  "homepage": "https://github.com/ShivanshuPande/docker-2#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "prisma": "^6.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.15",
+    "typescript": "^5.8.3"
+  }
+}
