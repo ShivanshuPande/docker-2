@@ -4,16 +4,20 @@ const client = new PrismaClient()
 const app = express();
 app.use(express.json());
 
-app.get("/" , (req, res)=>{
-    res.json({
-        message : "well ,hi there from the index.ts file"
-    })
+app.get("/" ,async (req, res)=>{
+    try{
+        const response = await client.user.findFirst();
+        res.json(response)
+    }catch(error){
+        console.log(error)
+    }
+   
 })
 
 app.post("/" , async (req , res)=>{
     await client.user.create({
         data: {
-            name : req.body.name
+            username : req.body.name
         }
     })
     res.json({

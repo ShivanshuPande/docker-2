@@ -17,15 +17,19 @@ const client_1 = require("@prisma/client");
 const client = new client_1.PrismaClient();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.get("/", (req, res) => {
-    res.json({
-        message: "well ,hi there from the index.ts file"
-    });
-});
+app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const response = yield client.user.findFirst();
+        res.json(response);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}));
 app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     yield client.user.create({
         data: {
-            name: req.body.name
+            username: req.body.name
         }
     });
     res.json({
