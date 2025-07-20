@@ -1,6 +1,7 @@
 import express from "express";
+import { PrismaClient } from "@prisma/client";
+const client = new PrismaClient()
 const app = express();
-
 app.use(express.json());
 
 app.get("/" , (req, res)=>{
@@ -9,6 +10,13 @@ app.get("/" , (req, res)=>{
     })
 })
 
-app.post("/" , (req , res)=>{
-    
+app.post("/" , async (req , res)=>{
+    await client.user.create({
+        data: {
+            name : req.body.name
+        }
+    })
+    res.json({
+        message :"You are successfully logged in !!!!"
+    })
 })
