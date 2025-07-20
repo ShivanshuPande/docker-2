@@ -25,4 +25,9 @@ app.post("/" , async (req , res)=>{
     })
 })
 
+
+
 app.listen(3000);
+
+//layers in docker , the innermost layer is the most storage laid
+
