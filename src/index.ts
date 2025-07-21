@@ -11,6 +11,7 @@ app.get("/" ,async (req, res)=>{
     }catch(error){
         console.log(error)
     }
+    console.log("The command has reached the get end-point")
    
 })
 

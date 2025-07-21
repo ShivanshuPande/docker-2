@@ -25,6 +25,7 @@ app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     catch (error) {
         console.log(error);
     }
+    console.log("The command has reached the get end-point");
 }));
 app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     yield client.user.create({
@@ -37,3 +38,4 @@ app.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     });
 }));
 app.listen(3000);
+//layers in docker , the innermost layer is the most storage laid
